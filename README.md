@@ -11,6 +11,11 @@ The resulting library can be then freely concatenated or tensored with others to
 
 The hysterion functions are implementing a proxymity detection as well, which helps the detection of switch-over points in a noisy data set. In this case, not only the exceeding of the switch-point values are treated as switch-over points, but also the reach of local extremas within a set proximity of them. Therefore if the switch-point value is not reached due to the noise, the switch-over can be still detected approximately. The proximity can be set by the user upon definition of the function.
 
+The memory of the functions can be reset with the help of reset_memory(). They can be set to a custom value by the user, during changeover it will be set to zero or one accordingly.
+
+The function get_history() returns the values returned by the function during simulation. After training, this array is reset. This can be also done with the function reset_memory().  
+
+
 The idea used here is based on the work: G. Thiele, A. Fey, D. Sommer and J. Krüger, "System identification of a hysteresis-controlled pump system using SINDy," 2020 24th International Conference on System Theory, Control and Computing (ICSTCC), 2020, pp. 457-464, doi: 10.1109/ICSTCC50638.2020.9259776.
 
 For PySindy and its creators please see the documentations at https://pysindy.readthedocs.io/en/latest/
